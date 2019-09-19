@@ -1,34 +1,41 @@
 import java.util.Scanner;
 import java.lang.Math;
+import java.util.Random;
 
 public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(addition(1,5));
-        System.out.println(subtraction(5,2));
-        System.out.println(multiplication(2,3));
-        System.out.println(division(9,3));
-        System.out.println(modulus(5,2));
-
-
-
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
-        System.out.println(userInput);
-
-
-        String yesOrNo = "y";
-        do {
-            System.out.print("Enter a number between 1 and 10: ");
-            System.out.println( factorial());
-            System.out.println("Would you like to try another number? Y/N");
-            yesOrNo = sc.nextLine();
-
-        }while (yesOrNo.equalsIgnoreCase("Y"));
+//        System.out.println(addition(1,5));
+//        System.out.println(subtraction(5,2));
+//        System.out.println(multiplication(2,3));
+//        System.out.println(division(9,3));
+//        System.out.println(modulus(5,2));
+//
+//
+//
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        System.out.println(userInput);
+//
+//
+//        String yesOrNo = "y";
+//        do {
+//            System.out.print("Enter a number between 1 and 10: ");
+//            System.out.println( factorial());
+//            System.out.println("Would you like to try another number? Y/N");
+//            yesOrNo = sc.nextLine();
+//
+//        }while (yesOrNo.equalsIgnoreCase("Y"));
 
         System.out.println("How many sides do the dice have? ");
         int diceSides = sc.nextInt();
+
+        do {
+            System.out.println(dice(diceSides));
+        }while ()
+
+
 
     }
 
@@ -84,9 +91,12 @@ public class MethodsExercises {
         return fact;
     }
 
-//    public static int dice(int sides){
-//        int di1 = java.lang.Math.random()
-//    }
+    public static String dice(int sides){
+        Random random = new Random();
+        int di1 = random.nextInt(sides);
+        int di2 = random.nextInt(sides);
+        return "Your dice landed on " + di1 + " and " + di2;
+    }
 
 
 
