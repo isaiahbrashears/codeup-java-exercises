@@ -65,13 +65,13 @@ public class MethodsExercises {
             int userNum = Integer.parseInt(sc.nextLine());
             if ( userNum < min || userNum > max ){
                 System.out.print("Invalid number, try again: ");
-                return getInteger(1, 10);
+                return getInteger(min, max);
             }else {
                 return userNum;
             }
         }else {
             System.out.print("Invalid number, try again: ");
-            return getInteger(1, 10);
+            return getInteger(min, max);
         }
     }
 
