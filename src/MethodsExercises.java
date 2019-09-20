@@ -29,15 +29,16 @@ public class MethodsExercises {
         }while (yesOrNo.equalsIgnoreCase("Y"));
 
         System.out.println("How many sides do the dice have? ");
-        int diceSides = sc.nextInt();
 
-        yesOrNo = "y";
+        int diceSides = sc.nextInt();
+        sc.nextLine();
+
+        String diceContinue = "y";
         do {
-            System.out.println(yesOrNo);
             System.out.println(dice(diceSides));
             System.out.println("Would you like to roll again? Y/N");
-            yesOrNo = sc.nextLine();
-        }while (yesOrNo.equalsIgnoreCase("y"));
+            diceContinue = sc.nextLine();
+        }while (diceContinue.equalsIgnoreCase("y"));
 
 
 
