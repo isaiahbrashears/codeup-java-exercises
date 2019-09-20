@@ -13,27 +13,31 @@ public class MethodsExercises {
 //        System.out.println(modulus(5,2));
 //
 //
-//
+
 //        System.out.print("Enter a number between 1 and 10: ");
 //        int userInput = getInteger(1, 10);
 //        System.out.println(userInput);
 //
 //
-//        String yesOrNo = "y";
-//        do {
-//            System.out.print("Enter a number between 1 and 10: ");
-//            System.out.println( factorial());
-//            System.out.println("Would you like to try another number? Y/N");
-//            yesOrNo = sc.nextLine();
-//
-//        }while (yesOrNo.equalsIgnoreCase("Y"));
+        String yesOrNo = "y";
+        do {
+            System.out.print("Enter a number between 1 and 10: ");
+            System.out.println( factorial());
+            System.out.println("Would you like to try another number? Y/N");
+            yesOrNo = sc.nextLine();
+
+        }while (yesOrNo.equalsIgnoreCase("Y"));
 
         System.out.println("How many sides do the dice have? ");
         int diceSides = sc.nextInt();
 
+        yesOrNo = "y";
         do {
+            System.out.println(yesOrNo);
             System.out.println(dice(diceSides));
-        }while ()
+            System.out.println("Would you like to roll again? Y/N");
+            yesOrNo = sc.nextLine();
+        }while (yesOrNo.equalsIgnoreCase("y"));
 
 
 
