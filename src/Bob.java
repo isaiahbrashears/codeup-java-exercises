@@ -5,17 +5,18 @@ public class Bob {
         System.out.println("talk to Bob: ");
         String chat = input.nextLine();
 
-        if (chat.endsWith("?")){
+        if (chat.endsWith("?")) {
             System.out.println("Sure");
-        }else if(chat.endsWith("!")){
+        } else if (chat.endsWith("!")) {
             System.out.println("Whoa, Chill out!");
-        }else if(chat.isEmpty()){
+        } else if (chat.isEmpty()) {
             System.out.println("Fine. Be that way!");
-        }else{
+        } else {
             System.out.println("whatever");
         }
 
 
-
     }
 }
+
+
