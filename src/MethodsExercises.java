@@ -40,6 +40,8 @@ public class MethodsExercises {
             diceContinue = sc.nextLine();
         }while (diceContinue.equalsIgnoreCase("y"));
 
+        System.out.println("pick a number between 1-100 ");
+        System.out.println(higherLower());
 
 
     }
@@ -103,6 +105,23 @@ public class MethodsExercises {
         return "Your dice landed on " + di1 + " and " + di2;
     }
 
+    public static String higherLower(){
+        Random random = new Random();
+        Scanner sc = new Scanner(System.in);
+        int oneThroughOneHundred = random.nextInt(100);
+        int userInput =  Integer.parseInt(sc.nextLine());
+        if (userInput < oneThroughOneHundred){
+            System.out.println(oneThroughOneHundred);
+            return "LOWER";
+        }else if (userInput > oneThroughOneHundred){
+            System.out.println(oneThroughOneHundred);
+            return "HIGHER";
+        }else if(userInput == oneThroughOneHundred){
+            System.out.println(oneThroughOneHundred);
+            return "GOOD GUESS!";
+        }
+        return "";
+    }
 
 
 }
