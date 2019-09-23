@@ -6,18 +6,18 @@ public class MethodsExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-//        System.out.println(addition(1,5));
-//        System.out.println(subtraction(5,2));
-//        System.out.println(multiplication(2,3));
-//        System.out.println(division(9,3));
-//        System.out.println(modulus(5,2));
-//
-//
+        System.out.println(addition(1,5));
+        System.out.println(subtraction(5,2));
+        System.out.println(multiplication(2,3));
+        System.out.println(division(9,3));
+        System.out.println(modulus(5,2));
 
-//        System.out.print("Enter a number between 1 and 10: ");
-//        int userInput = getInteger(1, 10);
-//        System.out.println(userInput);
-//
+
+
+        System.out.print("Enter a number between 1 and 10: ");
+        int userInput = getInteger(1, 10);
+        System.out.println(userInput);
+
 //
         String yesOrNo = "y";
         do {
@@ -110,15 +110,21 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         int oneThroughOneHundred = random.nextInt(100);
         int userInput =  Integer.parseInt(sc.nextLine());
-        if (userInput < oneThroughOneHundred){
-            System.out.println(oneThroughOneHundred);
-            return "LOWER";
-        }else if (userInput > oneThroughOneHundred){
-            System.out.println(oneThroughOneHundred);
-            return "HIGHER";
-        }else if(userInput == oneThroughOneHundred){
-            System.out.println(oneThroughOneHundred);
-            return "GOOD GUESS!";
+        if (userInput > 0 && userInput < 101) {
+            if (userInput < oneThroughOneHundred) {
+                System.out.println(oneThroughOneHundred);
+                return "LOWER";
+            } else if (userInput > oneThroughOneHundred) {
+                System.out.println(oneThroughOneHundred);
+                return "HIGHER";
+            } else if (userInput == oneThroughOneHundred) {
+                System.out.println(oneThroughOneHundred);
+                return "GOOD GUESS!";
+            }
+
+        }else {
+            System.out.println( "Invalid Input try again: ");
+            return higherLower();
         }
         return "";
     }
