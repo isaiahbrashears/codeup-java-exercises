@@ -40,8 +40,11 @@ public class MethodsExercises {
             diceContinue = sc.nextLine();
         }while (diceContinue.equalsIgnoreCase("y"));
 
+        Random random = new Random();
+        int oneThroughOneHundred = random.nextInt(100);
+
         System.out.println("pick a number between 1-100 ");
-        System.out.println(higherLower());
+        System.out.println(higherLower(oneThroughOneHundred, 0));
 
 
     }
@@ -105,26 +108,29 @@ public class MethodsExercises {
         return "Your dice landed on " + di1 + " and " + di2;
     }
 
-    public static String higherLower(){
-        Random random = new Random();
+
+    public static String higherLower(int randomNum, int count){
         Scanner sc = new Scanner(System.in);
-        int oneThroughOneHundred = random.nextInt(100);
         int userInput =  Integer.parseInt(sc.nextLine());
         if (userInput > 0 && userInput < 101) {
-            if (userInput < oneThroughOneHundred) {
-                System.out.println(oneThroughOneHundred);
-                return "LOWER";
-            } else if (userInput > oneThroughOneHundred) {
-                System.out.println(oneThroughOneHundred);
-                return "HIGHER";
-            } else if (userInput == oneThroughOneHundred) {
-                System.out.println(oneThroughOneHundred);
+            if (userInput > randomNum) {
+                count++;
+                System.out.println("guess number " + count);
+                System.out.println("LOWER");
+                return higherLower(randomNum, count++);
+            } else if (userInput < randomNum) {
+                count++;
+                System.out.println("guess number " + count);
+                System.out.println("HIGHER");
+                return higherLower(randomNum, count++);
+            } else if (userInput == randomNum) {
+                count = count + 1;
+                System.out.println("guess number " + count);
                 return "GOOD GUESS!";
             }
-
         }else {
             System.out.println( "Invalid Input try again: ");
-            return higherLower();
+            return higherLower(randomNum, count);
         }
         return "";
     }
