@@ -14,34 +14,34 @@ public class MethodsExercises {
 
 
 
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10);
-        System.out.println(userInput);
-
+//        System.out.print("Enter a number between 1 and 10: ");
+//        int userInput = getInteger(1, 10);
+//        System.out.println(userInput);
 //
-        String yesOrNo = "y";
-        do {
-            System.out.print("Enter a number between 1 and 10: ");
-            System.out.println( factorial());
-            System.out.println("Would you like to try another number? Y/N");
-            yesOrNo = sc.nextLine();
-
-        }while (yesOrNo.equalsIgnoreCase("Y"));
-
-        System.out.println("How many sides do the dice have? ");
-
-        int diceSides = sc.nextInt();
-        sc.nextLine();
-
-        String diceContinue = "y";
-        do {
-            System.out.println(dice(diceSides));
-            System.out.println("Would you like to roll again? Y/N");
-            diceContinue = sc.nextLine();
-        }while (diceContinue.equalsIgnoreCase("y"));
+////
+//        String yesOrNo = "y";
+//        do {
+//            System.out.print("Enter a number between 1 and 10: ");
+//            System.out.println( factorial());
+//            System.out.println("Would you like to try another number? Y/N");
+//            yesOrNo = sc.nextLine();
+//
+//        }while (yesOrNo.equalsIgnoreCase("Y"));
+//
+//        System.out.println("How many sides do the dice have? ");
+//
+//        int diceSides = sc.nextInt();
+//        sc.nextLine();
+//
+//        String diceContinue = "y";
+//        do {
+//            System.out.println(dice(diceSides));
+//            System.out.println("Would you like to roll again? Y/N");
+//            diceContinue = sc.nextLine();
+//        }while (diceContinue.equalsIgnoreCase("y"));
 
         Random random = new Random();
-        int oneThroughOneHundred = random.nextInt(100);
+        int oneThroughOneHundred = random.nextInt(100) + 1;
 
         System.out.println("pick a number between 1-100 ");
         System.out.println(higherLower(oneThroughOneHundred, 0));
@@ -103,8 +103,8 @@ public class MethodsExercises {
 
     public static String dice(int sides){
         Random random = new Random();
-        int di1 = random.nextInt(sides);
-        int di2 = random.nextInt(sides);
+        int di1 = random.nextInt(sides) + 1;
+        int di2 = random.nextInt(sides) + 1;
         return "Your dice landed on " + di1 + " and " + di2;
     }
 
@@ -112,7 +112,23 @@ public class MethodsExercises {
     public static String higherLower(int randomNum, int count){
         Scanner sc = new Scanner(System.in);
         int userInput =  Integer.parseInt(sc.nextLine());
-        if (userInput > 0 && userInput < 101) {
+        if(count >= 4){
+            if (userInput > randomNum) {
+                count++;
+                System.out.println("guess number " + count);
+                System.out.println("LOWER");
+                return "out of guesses";
+            } else if (userInput < randomNum) {
+                count++;
+                System.out.println("guess number " + count);
+                System.out.println("HIGHER");
+                return "out of guesses";
+            } else if (userInput == randomNum) {
+                count = count + 1;
+                System.out.println("guess number " + count);
+                return "GOOD GUESS!";
+            }
+        }else if (userInput > 0 && userInput < 101) {
             if (userInput > randomNum) {
                 count++;
                 System.out.println("guess number " + count);
