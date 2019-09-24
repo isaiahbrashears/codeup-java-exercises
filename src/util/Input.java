@@ -3,35 +3,45 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    public Scanner scanner;
+    public Scanner scanner = new Scanner(System.in);
 
     public String getString(){
         System.out.println("enter a string");
         return scanner.nextLine();
     }
 
-    public boolean YesNo(){
-        System.out.println("enter yes or no");
-        return scanner.nextLine().equalsIgnoreCase("y") || scanner.nextLine().equalsIgnoreCase("yes");
+    public boolean yesNo(){
+        String yesorno = scanner.nextLine();
+        return yesorno.equalsIgnoreCase("y") || yesorno.equalsIgnoreCase("yes");
     }
 
     public int getInt(int min, int max){
-        if (Integer.parseInt( scanner.nextLine() ) >= min && Integer.parseInt( scanner.nextLine() ) >= max){
-            return Integer.parseInt( scanner.nextLine());
+        System.out.format("enter int between %s and %s",min, max);
+        int userNum = Integer.parseInt( scanner.nextLine() );
+        if ( userNum >= min && userNum  <= max){
+            return userNum;
         }else {
             return getInt(min, max);
         }
     }
 
     public int getInt(){
+        System.out.println("enter an int");
         return scanner.nextInt();
     }
 
     public double getDouble(double min, double max){
-        if (Double.parseDouble( scanner.nextLine() ) >= min && Double.parseDouble( scanner.nextLine() ) >= max){
-            return Double.parseDouble( scanner.nextLine());
+        System.out.format("enter double between %s and %s",min, max);
+        double userDbl = scanner.nextDouble();
+        if ( userDbl >= min && userDbl <= max){
+            return userDbl;
         }else {
             return getDouble(min, max);
         }
+    }
+
+    public double getDouble(){
+        System.out.println("enter a double");
+        return scanner.nextDouble();
     }
 }
