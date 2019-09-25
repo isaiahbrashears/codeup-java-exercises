@@ -3,10 +3,13 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    public Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+
+    public Input(){
+        this.scanner = new Scanner(System.in);
+    }
 
     public String getString(){
-        System.out.println("enter a string");
         return scanner.nextLine();
     }
 
@@ -16,32 +19,30 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.format("enter int between %s and %s",min, max);
         int userNum = Integer.parseInt( scanner.nextLine() );
         if ( userNum >= min && userNum  <= max){
             return userNum;
         }else {
+            System.out.format("invalid number, choose number between %s and %s: \n", min, max);
             return getInt(min, max);
         }
     }
 
     public int getInt(){
-        System.out.println("enter an int");
         return scanner.nextInt();
     }
 
     public double getDouble(double min, double max){
-        System.out.format("enter double between %s and %s",min, max);
         double userDbl = scanner.nextDouble();
         if ( userDbl >= min && userDbl <= max){
             return userDbl;
         }else {
+            System.out.format("invalid number, choose number between %s and %s: \n", min, max);
             return getDouble(min, max);
         }
     }
 
     public double getDouble(){
-        System.out.println("enter a double");
         return scanner.nextDouble();
     }
 }
