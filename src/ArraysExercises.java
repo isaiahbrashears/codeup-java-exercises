@@ -6,7 +6,6 @@ public class ArraysExercises {
     static Person[] addPerson(Person[] arr, Person name) {
         int index = arr.length;
         Person[] newArr = Arrays.copyOf(arr, arr.length + 1);
-
         newArr[index] = name;
         return newArr;
     }
