@@ -8,7 +8,7 @@ public class MoviesApplication {
         Input input = new Input();
 
         boolean keepGoing = true;
-
+        int userPick;
         do {
             System.out.println(
                     "\nWhat would you like to do?\n" +
@@ -22,7 +22,7 @@ public class MoviesApplication {
                             "6 - view movies in the musical category\n" +
                             "\n" +
                             "Enter your choice:");
-            int userPick = input.getInt(0, 6);
+            userPick = input.getInt(0, 6);
             if(userPick == 0) {
                 keepGoing = false;
             }else if(userPick == 1) {

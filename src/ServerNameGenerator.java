@@ -10,8 +10,8 @@ public class ServerNameGenerator {
     }
 
     public static void main(String[] args) {
-        String newServerName = randomElement(adjectives) + "-" + randomElement(nouns);
 
+        String newServerName = randomElement(adjectives) + "-" + randomElement(nouns);
         System.out.println("Your new server name is:\n" + newServerName);
 
 
