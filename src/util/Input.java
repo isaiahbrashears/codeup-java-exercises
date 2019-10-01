@@ -19,12 +19,12 @@ public class Input {
         return yesorno.equalsIgnoreCase("y") || yesorno.equalsIgnoreCase("yes");
     }
 
-    private static int userNum;
+
     public int getInt(int min, int max){
         System.out.format("Choose number between %s and %s: \n", min, max);
 
         try{
-            userNum = Integer.valueOf( scanner.nextLine() );;
+           int userNum = Integer.valueOf( scanner.nextLine() );;
 
             if ( userNum >= min && userNum  <= max){
                 return userNum;
@@ -41,7 +41,7 @@ public class Input {
 
     public int getInt(){
         try{
-            userNum = Integer.valueOf( scanner.nextLine() );
+           int userNum = Integer.valueOf( scanner.nextLine() );
             return userNum;
 
         }catch (Exception e){
@@ -51,11 +51,11 @@ public class Input {
 
     }
 
-    private static double userDbl;
+
     public double getDouble(double min, double max){
 
         try{
-            userDbl = Double.valueOf(scanner.nextLine());
+           double userDbl = Double.valueOf(scanner.nextLine());
             if ( userDbl >= min && userDbl <= max){
                 return userDbl;
             }else {
@@ -70,8 +70,7 @@ public class Input {
 
     public double getDouble(){
         try{
-            userDbl = Integer.valueOf( scanner.nextLine() );
-            return userDbl;
+            return Integer.valueOf(scanner.nextLine());
         }catch (Exception e){
             System.out.println("Not valid double");
             return getDouble();
@@ -80,8 +79,7 @@ public class Input {
 
     public int getBinary(){
         try {
-            userNum = Integer.valueOf(scanner.nextLine(),2);
-            return userNum;
+            return Integer.valueOf(scanner.nextLine(),2);
         }catch (Exception e){
             System.out.println("Invalid Binary");
             return getBinary();
@@ -90,12 +88,12 @@ public class Input {
 
     public int getHex(){
         try {
-            userNum = Integer.valueOf(scanner.nextLine(),16);
-            return userNum;
+            return Integer.valueOf(scanner.nextLine(),16);
         }catch (Exception e){
             System.out.println("Invalid Hex");
             return getHex();
         }
     }
+
 
 }
