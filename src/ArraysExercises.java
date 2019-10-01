@@ -10,8 +10,6 @@ public class ArraysExercises {
         return newArr;
     }
 
-
-
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString( numbers));
@@ -26,8 +24,6 @@ public class ArraysExercises {
 
         System.out.println("\n");
         people = addPerson(people, new Person("izzy Brash"));
-
-
 
         for (Person person : people){
             System.out.println(person.getName());
