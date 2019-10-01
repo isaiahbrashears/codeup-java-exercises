@@ -51,8 +51,6 @@ public class Input {
 
     }
 
-
-
     private static double userDbl;
     public double getDouble(double min, double max){
 
@@ -80,7 +78,7 @@ public class Input {
         }
     }
 
-    public Object getBinary(){
+    public int getBinary(){
         try {
             userNum = Integer.valueOf(scanner.nextLine(),2);
             return userNum;
@@ -90,7 +88,7 @@ public class Input {
         }
     }
 
-    public Object getHex(){
+    public int getHex(){
         try {
             userNum = Integer.valueOf(scanner.nextLine(),16);
             return userNum;
