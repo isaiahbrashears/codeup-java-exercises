@@ -2,8 +2,8 @@
 import java.util.Arrays;
 
 public class ArraysExercises {
-    static Person[] people = new Person[3];
-    public static Person[] addPerson(Person[] arr, Person name) {
+    private static Person[] people = new Person[3];
+    private static Person[] addPerson(Person[] arr, Person name) {
         int index = arr.length;
         Person[] newArr = Arrays.copyOf(arr, arr.length + 1);
         newArr[index] = name;
