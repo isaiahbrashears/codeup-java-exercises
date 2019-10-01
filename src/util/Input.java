@@ -54,6 +54,7 @@ public class Input {
 
     public double getDouble(double min, double max){
 
+        System.out.format("Choose number between %s and %s: \n", min, max);
         try{
            double userDbl = Double.valueOf(scanner.nextLine());
             if ( userDbl >= min && userDbl <= max){
@@ -96,4 +97,9 @@ public class Input {
     }
 
 
+    public static void main(String[] args) {
+        Input input = new Input();
+
+        System.out.println(input.getInt());
+    }
 }
