@@ -1,7 +1,7 @@
 package util;
 
 import java.util.Scanner;
-import java.util.function.BinaryOperator;
+
 
 public class Input {
     private Scanner scanner;
@@ -99,6 +99,5 @@ public class Input {
             return getHex();
         }
     }
-
 
 }
