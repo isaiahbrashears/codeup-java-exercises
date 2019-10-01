@@ -113,6 +113,7 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         int userInput =  Integer.parseInt(sc.nextLine());
         if(count >= 4){
+
             if (userInput > randomNum) {
                 count++;
                 System.out.println("guess number " + count);
@@ -128,7 +129,9 @@ public class MethodsExercises {
                 System.out.println("guess number " + count);
                 return "GOOD GUESS!";
             }
+
         }else if (userInput > 0 && userInput < 101) {
+
             if (userInput > randomNum) {
                 count++;
                 System.out.println("guess number " + count);
@@ -144,6 +147,7 @@ public class MethodsExercises {
                 System.out.println("guess number " + count);
                 return "GOOD GUESS!";
             }
+
         }else {
             System.out.println( "Invalid Input try again: ");
             return higherLower(randomNum, count);

@@ -33,7 +33,6 @@ public class ControlFlowExercises {
             }
         }
 
-
         String tableContinue = "Y";
 
         while (tableContinue.equalsIgnoreCase("y")) {
@@ -55,11 +54,9 @@ public class ControlFlowExercises {
 
         System.out.println("ok then");
 
-
         do {
-
             System.out.println("give me a number grade 1 - 100");
-             int grade = Integer.parseInt(input.nextLine());
+            int grade = Integer.parseInt(input.nextLine());
 
             if (grade > 87) {
                 System.out.println("A");
@@ -76,7 +73,6 @@ public class ControlFlowExercises {
             System.out.println("would you like to test another grade? y/n");
 
         }while (input.nextLine().equalsIgnoreCase("y"));
-
 
     }
 

@@ -16,10 +16,6 @@ public class Bob {
         } else {
             System.out.println("whatever");
         }
-
-
-
-
     }
 }
 
