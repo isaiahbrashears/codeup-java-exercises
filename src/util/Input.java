@@ -96,7 +96,7 @@ public class Input {
             return userNum;
         }catch (Exception e){
             System.out.println("Invalid Hex");
-            return getBinary();
+            return getHex();
         }
     }
 
