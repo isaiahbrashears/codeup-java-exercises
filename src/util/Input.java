@@ -2,7 +2,6 @@ package util;
 
 import java.util.Scanner;
 
-
 public class Input {
     private Scanner scanner;
 
@@ -18,7 +17,6 @@ public class Input {
         String yesorno = scanner.nextLine();
         return yesorno.equalsIgnoreCase("y") || yesorno.equalsIgnoreCase("yes");
     }
-
 
     public int getInt(int min, int max){
         System.out.format("Choose number between %s and %s: \n", min, max);
@@ -36,7 +34,6 @@ public class Input {
             System.out.println("Not valid integer");
             return getInt(min, max);
         }
-
     }
 
     public int getInt(){
@@ -48,9 +45,7 @@ public class Input {
             System.out.println("Not valid integer");
             return getInt();
         }
-
     }
-
 
     public double getDouble(double min, double max){
 
@@ -96,10 +91,4 @@ public class Input {
         }
     }
 
-
-    public static void main(String[] args) {
-        Input input = new Input();
-
-        System.out.println(input.getInt());
-    }
 }
