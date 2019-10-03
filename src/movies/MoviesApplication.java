@@ -1,12 +1,25 @@
 package movies;
 import util.Input;
 
+import java.util.ArrayList;
+
 
 public class MoviesApplication {
 
 
     public static void main(String[] args) {
         Input input = new Input();
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.add(9);
+        nums.add(34);
+        nums.add(16);
+        nums.clear();
+        nums.add(14);
+        for (int num: nums) {
+            System.out.println(num);
+        }
+
 
         boolean keepGoing = true;
         int userPick;

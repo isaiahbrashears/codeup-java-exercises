@@ -13,6 +13,15 @@ public class Input {
         return scanner.nextLine();
     }
 
+    public String getString(String prompt){
+        if(prompt.isEmpty()){
+            System.out.println("Type something: ");
+        } else {
+            System.out.println(prompt);
+        }
+        return getString();
+    }
+
     public boolean yesNo(){
         String yesorno = scanner.nextLine();
         return yesorno.equalsIgnoreCase("y") || yesorno.equalsIgnoreCase("yes");
