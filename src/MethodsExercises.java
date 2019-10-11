@@ -44,7 +44,7 @@ public class MethodsExercises {
         int oneThroughOneHundred = random.nextInt(100) + 1;
 
         System.out.println("pick a number between 1-100 ");
-        System.out.println(higherLower(oneThroughOneHundred, 0));
+
 
 
     }
@@ -109,51 +109,6 @@ public class MethodsExercises {
     }
 
 
-    public static String higherLower(int randomNum, int count){
-        Scanner sc = new Scanner(System.in);
-        int userInput =  Integer.parseInt(sc.nextLine());
-        if(count >= 4){
-
-            if (userInput > randomNum) {
-                count++;
-                System.out.println("guess number " + count);
-                System.out.println("LOWER");
-                return "out of guesses";
-            } else if (userInput < randomNum) {
-                count++;
-                System.out.println("guess number " + count);
-                System.out.println("HIGHER");
-                return "out of guesses";
-            } else if (userInput == randomNum) {
-                count = count + 1;
-                System.out.println("guess number " + count);
-                return "GOOD GUESS!";
-            }
-
-        }else if (userInput > 0 && userInput < 101) {
-
-            if (userInput > randomNum) {
-                count++;
-                System.out.println("guess number " + count);
-                System.out.println("LOWER");
-                return higherLower(randomNum, count++);
-            } else if (userInput < randomNum) {
-                count++;
-                System.out.println("guess number " + count);
-                System.out.println("HIGHER");
-                return higherLower(randomNum, count++);
-            } else if (userInput == randomNum) {
-                count = count + 1;
-                System.out.println("guess number " + count);
-                return "GOOD GUESS!";
-            }
-
-        }else {
-            System.out.println( "Invalid Input try again: ");
-            return higherLower(randomNum, count);
-        }
-        return "";
-    }
 
 
 }
